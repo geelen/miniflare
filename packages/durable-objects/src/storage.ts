@@ -20,7 +20,7 @@ import { DurableObjectError } from "./error";
 import { ReadWriteMutex } from "./rwmutex";
 import { ShadowStorage } from "./shadow";
 
-const MAX_KEYS = 128;
+const MAX_KEYS = 128 * 1024 * 1024;
 const MAX_KEY_SIZE = 2048; /* 2KiB */
 const MAX_VALUE_SIZE = 128 * 1024; /* 128KiB */
 // As V8 serialisation adds some tagging information, Workers actually allows
